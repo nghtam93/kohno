@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Kohno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/libs/flickity/flickity.min.css"/>
+    <link href="assets/css/main.css" rel="stylesheet">
+  </head>
+  <body class="home">
+
+    <header class="header">
+      <div class="container">
+
+        <div class="header__top">
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo.svg" alt="Logo">
+            </a>
+          </h1>
+
+          <div class="d-md-none ml-auto d-flex">
+
+            <div class="header__searchmb js-search-btn" data-id="sidebar__left">
+              <a href=""><span class="icon-search"></span></a>
+            </div>
+
+            <div class="menu-mb__btn" data-id="menu__mobile">
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="header__nav d-none d-md-block" data-toggle="sticky-onscroll">
+      <nav class="main__nav">
+          <ul class="el__menu">
+            <li class="menu-item"><a href="index.html">ホーム</a></li>
+            <li class="menu-item"><a href="login.html">ログイン・マイページ</a></li>
+            <li class="menu-item"><a href="blog.html">カート <span>1</span></a></li>
+            <li class="menu-item"><a href="contact.html">購入履歴</a></li>
+            <li class="menu-item"><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+      </nav>
+    </div>
+
+
+    <div class="wrapper">
+
+      <div class="container-fluid container-xxl">
+
+        <div class="row gx-45">
+          <div class="col-md-3">
+            <div id="sidebar__left" class="sidebar sidebar__left">
+
+              <div class="sidebar__left__header d-flex d-md-none">
+                <div class="logo">
+                  <a href="index.html">
+                    <img src="images/logo.svg" alt="Logo">
+                  </a>
+                </div>
+                <div class="ml-auto">
+                  <span class="icon-close js-menu__close"></span>
+                </div>
+              </div>
+
+              <div class="sidebar__left__content">
+                <p class="mb-2">商品検索</p>
+                <div class="mb-3">
+
+                  <div class="dnselect js-dnselect">
+                    <div class="dnselect__label js-dnselect__label">すべての商品</div>
+                    <ul class="js-dnselect__list">
+                      <li><label><input type="radio" name="cate" value=""><span>すべての商品</span></label></li>
+                      <li><label><input type="radio" name="cate" value=""><span>皿</span></label></li>
+                      <li><label><input type="radio" name="cate" value=""><span>鉢・ボウル</span></label></li>
+                      <li><label><input type="radio" name="cate" value=""><span>茶碗・お椀</span></label></li>
+                      <li><label><input type="radio" name="cate" value=""><span>湯呑・酒器</span></label></li>
+                      <li><label><input type="radio" name="cate" value=""><span>マグ・スープカップ</span></label></li>
+                      <li><label><input type="radio" name="cate" value=""><span>ガラス製品</span></label></li>
+                      <li><label><input type="radio" name="cate" value=""><span>ポット</span></label></li>
+                      <li><label><input type="radio" name="cate" value=""><span>カトラリー</span></label></li>
+                      <li><label><input type="radio" name="cate" value=""><span>雑貨・小物</span></label></li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <div class="sidebar__search">
+                  <form action="">
+                      <form role="search" method="get" class="search-form search__form" action="">
+                        <input type="search" class="search-field form-control" value="" name="s" />
+                        <button class="search-submit" type="submit">検索</button>
+                      </form>
+                  </form>
+                </div>
+
+                <div class="sidebar__list">
+                  <div class="sidebar__list__title mb-3">アイテムで選ぶ</div>
+                  <ul>
+                    <li><a href="product-cat.html">皿</a></li>
+                    <li><a href="product-cat.html">鉢・ボウル</a></li>
+                    <li><a href="product-cat.html">茶碗・お椀</a></li>
+                    <li><a href="product-cat.html">湯呑・酒器</a></li>
+                    <li><a href="product-cat.html">マグ・スープカップ</a></li>
+                    <li><a href="product-cat.html">ガラス製品</a></li>
+                    <li><a href="product-cat.html">ポット</a></li>
+                    <li><a href="product-cat.html">カトラリー</a></li>
+                    <li><a href="product-cat.html">雑貨・小物</a></li>
+                  </ul>
+                </div>
+
+                <div class="sidebar__socical d-none d-md-block">
+                  <p class="sidebar__socical__title">SNS</p>
+                  <ul class="">
+                    <li><a href="" target="_blank"><span class="icon-facebook-circle"></span></a></li>
+                    <li><a href="" target="_blank"><span class="icon-instagram"></span></a></li>
+                    <li><a href="" target="_blank"><span class="icon-twitter"></span></a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+
+              <section class="home-slider flickity" data-flickity='{ "wrapAround": true, "pageDots": false, "prevNextButtons": false}'>
+                <div class="slider__item__wrap col-12">
+                  <div class="el__item">
+                    <div class="el__item__thumb">
+                      <div class="dnfix__thumb">
+                        <img src="images/Mainvisual.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__item__wrap col-12">
+                  <div class="el__item">
+                    <div class="el__item__thumb">
+                      <div class="dnfix__thumb">
+                        <img src="images/Mainvisual.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__item__wrap col-12">
+                  <div class="el__item">
+                    <div class="el__item__thumb">
+                      <div class="dnfix__thumb">
+                        <img src="images/Mainvisual.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="home-product">
+                <div class="sc__header">
+                  <h2 class="sc__header__title">特集</h2>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-sm-4">
+                    <div class="el__item -s1">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">特集１</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">特集２</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">特集３</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="home-product">
+                <div class="sc__header">
+                  <h2 class="sc__header__title">KOHNOのおすすめ</h2>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-sm-4">
+                    <div class="el__item -s1">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">KOHNOのおすすめ１</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">KOHNOのおすすめ２</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">KOHNOのおすすめ３</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="home-category">
+                <div class="sc__header">
+                  <h2 class="sc__header__title">商品カテゴリ</h2>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-sm-4">
+                    <div class="el__item -s1">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">皿</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">鉢・ボウル</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">茶碗・お椀</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">湯呑・酒器</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">マグ・スープカップ</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">ガラス製品</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">ポット</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">カラトリー</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <div class="el__item">
+                      <div class="el__item__thumb">
+                        <div class="dnfix__thumb">
+                          <img src="images/product-thumb.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="el__item__meta">
+                        <h3 class="el__item__title">雑貨・小物</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="home-about">
+                <header class="sc__header">
+                  <h2 class="sc__header__title">KOHNOについて</h2>
+                </header>
+
+                <div class="el__thumb">
+                  <div class="dnfix__thumb">
+                    <img src="images/home-about.jpg" alt="">
+                  </div>
+                </div>
+              </section>
+
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="footer text-center">
+        <div class="container">
+          <ul class="footer__nav">
+            <li><a href="">企業サイト</a></li>
+            <li><a href="">プライバシーポリシー</a></li>
+            <li><a href="">ご利用ガイド</a></li>
+            <li><a href="">お問い合わせ</a></li>
+          </ul>
+
+          <div class="footer__copyright">
+            <p>Copyright©︎ 2021 KOHNO All Rights Reserved.</p>
+          </div>
+
+        </div>
+      </footer>
+
+      <div id="menu__mobile" class="nav__mobile">
+        <div class="nav__mobile__header d-flex">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo.svg" alt="Logo">
+            </a>
+          </div>
+          <div class="ml-auto">
+            <span class="icon-close js-menu__close"></span>
+          </div>
+        </div>
+        <div class="nav__mobile__content">
+          <ul class="nav__mobile--ul">
+            <li class="menu-item"><a href="index.html">ホーム</a></li>
+            <li class="menu-item"><a href="login.html">ログイン・マイページ</a></li>
+            <li class="menu-item"><a href="blog.html">カート <span>1</span></a></li>
+            <li class="menu-item"><a href="contact.html">購入履歴</a></li>
+            <li class="menu-item"><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+
+          <div class="nav__mobile__socical">
+            <ul class="">
+              <li><a href="" target="_blank"><span class="icon-facebook-circle"></span></a></li>
+              <li><a href="" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li><a href="" target="_blank"><span class="icon-twitter"></span></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div> <!-- .wrapper -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/libs/flickity/flickity.pkgd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

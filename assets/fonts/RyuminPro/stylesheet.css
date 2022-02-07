@@ -1,0 +1,9 @@
+@font-face {
+    font-family: '';
+    src: url('RyuminPro-Light-AlphaNum.woff2') format('woff2'),
+        url('RyuminPro-Light-AlphaNum.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

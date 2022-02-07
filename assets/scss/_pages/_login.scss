@@ -1,0 +1,29 @@
+.login{
+	&-page{
+		padding: 50px 0;
+		&__wrapinput{
+			max-width: 500px;
+			margin: 0 auto 40px;
+		}
+	}
+	&-alert{
+		padding: 8px;
+		margin-bottom: 30px;
+		&.-error{
+			text-align: center;
+			border: 1px solid $color_primary;
+			color: $color_primary;
+		}
+	}
+
+	@media (max-width: 575px){
+		&-page{
+			&__wrapinput {
+			    max-width: 100%;
+			}
+		}
+		&-alert.-error, &--text {
+		    font-size: 11px;
+		}
+	}
+}

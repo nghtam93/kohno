@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'JoannaNovaW06';
+    src: url('JoannaNovaW06-Regular.woff2') format('woff2'),
+        url('JoannaNovaW06-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
