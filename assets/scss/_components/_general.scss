@@ -220,8 +220,10 @@
 .dnselect{
     position:relative;font-size:14px;
     &.-long{
-        height: 291px;
-        overflow: auto;
+        ul{
+            height: 291px;
+            overflow: auto;
+        }
     }
     &__label{
         width:100%;padding:6px 20px 6px 10px;border:1px solid #ccc;
