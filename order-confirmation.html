@@ -7,6 +7,7 @@
     <link rel="icon" href="images/favicon.png" />
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/libs/flickity/flickity.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/libs/select2/select2.min.css"/>
     <link href="assets/css/main.css" rel="stylesheet">
   </head>
   <body class="">
@@ -53,56 +54,124 @@
 
     <div class="wrapper">
 
-      <div class="container-sm container-md-780">
+      <div class="container-sm container-md-900">
 
-        <div class="login-page">
-          <form>
+        <div class="wrap__page">
+          <header class="page__header text-center">
+            <h1 class="page__header__title">ご注文確認</h1>
+          </header>
 
-            <div class="login-alert -error">
-              <p>・メールアドレスまたはパスワードが正しくありません</p>
-            </div>
-            <div class="login-page__wrapinput">
-              <div class="form-group row">
-                <label for="staticEmail" class="col-sm-3 col-form-label">ログイン</label>
-                <div class="col-sm-9">
-                  <p class="login--text">ご登録のメールアドレスとパスワードをご入力ください</p>
+          <div class="page-cart__items mb-sm-4">
+            <div class="el__box">
+              <div class="el__item">
+                <div class="row">
+                  <div class="col-lg-7 col-md-6">
+                    <div class="el__item__thumb mb-3 mb-md-0">
+                      <div class="dnfix__thumb">
+                        <img src="images/product-thumb2.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-6 d-md-flex align-items-end">
+                    <div class="el__item__meta pl-sm-5">
+                      <p class="mb-3">購入日時</p>
+                      <p class="mb-3">メーカー名・商品名・メーカー品番</p>
+                      <p class="mb-3">数量　ー件</p>
+                      <p class="mb-3">販売価格　ー円</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="staticEmail" class="col-sm-3 col-form-label">メールアドレス</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="staticEmail" placeholder="Email Address">
+
+              <div class="el__item">
+                <div class="row">
+                  <div class="col-lg-7 col-md-6">
+                    <div class="el__item__thumb mb-3 mb-md-0">
+                      <div class="dnfix__thumb">
+                        <img src="images/product-thumb2.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-6 d-md-flex align-items-end">
+                    <div class="el__item__meta pl-sm-5">
+                      <p class="mb-3">購入日時</p>
+                      <p class="mb-3">メーカー名・商品名・メーカー品番</p>
+                      <p class="mb-3">数量　ー件</p>
+                      <p class="mb-3">販売価格　ー円</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="inputPassword" class="col-sm-3 col-form-label">パスワード</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                </div>
+            </div> <!-- .el__box -->
+          </div>
+
+          <div class="page-cart__box">
+
+            <div class="el__box__wrap">
+              <div class="d-flex mb-5">
+                <div>注文内容</div>
+                <div class="ml-auto">ー件</div>
               </div>
-              <div class="form-group form-check row">
-                <div class="col-sm-9 offset-sm-3">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">パスワードを表示する</label>
-                </div>
+              <div class="d-flex mb-4">
+                <div>商品合計</div>
+                <div class="ml-auto">ー円</div>
+              </div>
+              <div class="d-flex mb-5">
+                <div>送料</div>
+                <div class="ml-auto">ー円</div>
+              </div>
+              <div class="d-flex mb-5">
+                <div>合計</div>
+                <div class="ml-auto">ー円</div>
+              </div>
+              <div class="d-flex mb-5">
+                <div>内消費税</div>
+                <div class="ml-auto">ー円</div>
               </div>
             </div>
+            <p class="text-center">あと〇〇円で送料無料となります<br>※商品により個別に送料が発生する可能性があります</p>
+          </div>
 
-            <button type="submit" class="btn -primary w-100 mb-3">ログイン</button>
+          <div class="page-cart__box">
 
-            <div class="text-center mb-5">
-              <a href="">パスワードをお忘れの方はこちら</a>
+            <div class="el__box__wrap">
+                <p class="mb-4">お支払い方法</p>
+                <p>クレジットカード</p>
+                <div class="d-flex align-items-center mb-4">
+                  <p>上6桁：000000 下2桁：00</p> <p class="ml-5"><img src="images/visa.png" alt=""></p>
+                </div>
+
+                <p class="mb-3">ご注文者様情報</p>
+                <p>河野花子 様</p>
+                <p>〒123-456</p>
+                <p>東京都 ●区●町１−１−１ ●●マンション１０１</p>
+                <p>▲▲▲▲@●●.com</p>
+                <p>0123456789</p>
             </div>
+          </div>
 
-            <div class="mb-4">
-              <a href="" class="btn -arrow-right w-100">新規会員登録はこちら</a>
-            </div>
-            <div class="mb-4">
-              <a href="" class="btn -arrow-right w-100">会員登録せずに購入</a>
-            </div>
+          <div class="page-cart__box">
 
-          </form>
-        </div>
+            <div class="el__box__wrap">
+                <p class="mb-4">配送方法</p>
+                <p>宅急便</p>
+                <p class="mb-5">  （送料 ¥● )</p>
+                <p class="mb-3">お届け先情報</p>
+                <p>河野花子 様</p>
+                <p>〒123-456</p>
+                <p>東京都 ●区●町１−１−１ ●●マンション１０１</p>
+                <p>●月●日</p>
+                <p>●時〜●時</p>
+            </div>
+          </div>
+
+          <div class="pt-5 pt-sm-0 mb-4">
+            <button href="" class="btn -primary w-100 mb-4">注文を確定する</button>
+
+            <div class="text-center">
+              <a href="" class="text-underline">入力内容を修正する</a>
+            </div>
+          </div>
 
 
       </div>
@@ -230,6 +299,7 @@
     </div> <!-- .wrapper -->
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="assets/libs/flickity/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/libs/select2/select2.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

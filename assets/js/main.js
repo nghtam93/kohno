@@ -214,6 +214,11 @@ $(document).ready(function(){
 
          return false;
     });
+
+    /*Payment*/
+    if($('select').hasClass('js-select2')){
+        $('.js-select2').select2();
+    }
 });
 
 

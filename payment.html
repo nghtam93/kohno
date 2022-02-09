@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Kohno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/libs/flickity/flickity.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/libs/select2/select2.min.css"/>
+    <link href="assets/css/main.css" rel="stylesheet">
+  </head>
+  <body class="">
+
+    <header class="header">
+      <div class="container">
+
+        <div class="header__top">
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo.svg" alt="Logo">
+            </a>
+          </h1>
+
+          <div class="d-md-none ml-auto d-flex">
+
+            <div class="header__searchmb js-search-btn" data-id="sidebar__left">
+              <a href=""><span class="icon-search"></span></a>
+            </div>
+
+            <div class="menu-mb__btn" data-id="menu__mobile">
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+              <span class="iconz-bar"></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="header__nav d-none d-md-block" data-toggle="sticky-onscroll">
+      <nav class="main__nav">
+          <ul class="el__menu">
+            <li class="menu-item"><a href="index.html">ホーム</a></li>
+            <li class="menu-item"><a href="login.html">ログイン・マイページ</a></li>
+            <li class="menu-item"><a href="cart.html">カート <span>1</span></a></li>
+            <li class="menu-item"><a href="contact.html">購入履歴</a></li>
+            <li class="menu-item"><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+      </nav>
+    </div>
+
+
+    <div class="wrapper">
+
+      <div class="container-sm container-md-900">
+
+        <div class="wrap__page">
+          <header class="page__header text-center">
+            <h1 class="page__header__title">ショッピングカート</h1>
+          </header>
+
+          <div class="payment__box mb-sm-5">
+            <div class="payment__box__wrap">
+
+              <div class="el__box -method">
+
+                <div class="py-4 mb-5">
+
+                  <div class="form-group row">
+                    <label class="col-4 col-sm-3">お支払い方法</label>
+                    <div class="col-8 col-sm-9">
+
+                      <ul class="sbmaket__radio">
+                        <li>
+                          <input type="radio" id="sbmaket__cat2-1" name="stt" value="like">
+                          <label for="sbmaket__cat2-1">人気順</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="sbmaket__cat2-2" name="stt" value="desc">
+                          <label for="sbmaket__cat2-2">金額の高い順</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="sbmaket__cat2-3" name="stt" value="asc">
+                          <label for="sbmaket__cat2-3">金額の低い順</label>
+                        </li>
+                      </ul>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <div class="col-md-3 letter-spacing-a4">クレジットカード情報</div>
+                  <div class="col-md-9">
+                    <p>※全て半角英数字でご記入ください</p>
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <label class="col-3 col-form-label">カード番号</label>
+                  <div class="col-9">
+                    <input type="text" class="form-control text-center" placeholder="0000 0000 0000 0000">
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <label class="col-3 col-form-label">名義人</label>
+                  <div class="col-9">
+                    <input type="text" class="form-control text-center" placeholder="HANAKO KOHNO">
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <label class="col-7 col-sm-3 col-form-label letter-spacing-a3 d-sm-flex align-items-center">
+                    セキュリティコード
+                    <p class="-color-A7A5A5 d-sm-none">裏面署名の数字3桁（または4桁）</p>
+                  </label>
+                  <div class="col-5 col-sm-9">
+                    <div class="row align-items-center">
+                      <div class="col-auto text-right d-none d-sm-block">
+                        <p class="-color-A7A5A5">裏面署名の数字3桁（または4桁）</p>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control -security-code text-center" placeholder="345">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <label class="col-3 col-form-label">お名前</label>
+                  <div class="col-9">
+                    <input type="text" class="form-control mb-2" placeholder="河野　花子">
+                    <small class="d-block text-center text-sm-left">※機種依存文字はご使用になれません。</small>
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <label class="col-3 col-form-label">有効期限</label>
+                  <div class="col-9 d-flex align-items-center justify-content-end">
+                    <select name="" id="" class="payment__box--month form-control ml-auto js-select2">
+                      <option value=""></option>
+                      <option value="">01</option>
+                      <option value="">02</option>
+                      <option value="">03</option>
+                      <option value="">04</option>
+                      <option value="">05</option>
+                      <option value="">06</option>
+                      <option value="">07</option>
+                      <option value="">08</option>
+                      <option value="">09</option>
+                      <option value="">10</option>
+                      <option value="">11</option>
+                      <option value="">12</option>
+                    </select>
+                    <span class="mx-3">/</span>
+                    <select name="" id="" class="payment__box--year form-control js-select2">
+                      <option value=""></option>
+                      <option value="">2022</option>
+                      <option value="">2023</option>
+                      <option value="">2024</option>
+                      <option value="">2025</option>
+                      <option value="">2026</option>
+                      <option value="">2027</option>
+                      <option value="">2028</option>
+                      <option value="">2029</option>
+                      <option value="">2030</option>
+                      <option value="">2031</option>
+                      <option value="">2032</option>
+                      <option value="">2033</option>
+                      <option value="">2034</option>
+                      <option value="">2035</option>
+                      <option value="">2036</option>
+
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="el__box -information">
+
+                <p class="mb-4">ご注文者様情報</p>
+
+                <div class="form-group row mb-4">
+                  <label class="col-3 col-form-label">お名前</label>
+                  <div class="col-9">
+                    <input type="text" class="form-control mb-2" placeholder="河野　花子">
+                    <small>※機種依存文字はご使用になれません。</small>
+                  </div>
+                </div>
+                <div class="form-group row mb-4">
+                  <label class="col-3 col-form-label">フリガナ</label>
+                  <div class="col-9">
+                    <input type="text" class="form-control mb-2" placeholder="コウノ　ハナコ">
+                    <small>※半角カタカナはご使用になれません。</small>
+                  </div>
+                </div>
+                <div class="form-group row mb-4">
+                  <label class="col-3 col-form-label">郵便番号</label>
+                  <div class="col-9">
+                    <div class="row d-block d-sm-flex gx-5">
+                      <div class="col">
+                        <input type="text" class="form-control mb-3 mb-sm-2" placeholder="123456 (ハイフン無し、半角数字)">
+                      </div>
+                      <div class="col-auto">
+                      <button class="btn -secondary mb-3 mb-sm-2">住所自動入力</button>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-sm-9 offset-sm-3">
+                    <small class="d-block text-center text-sm-left">※７桁の郵便番号を入力して「住所自動入力」ボタンを押すと、<br>
+                      県・市区町村名が入力されます。郵便番号がご不明の方はこちら</small>
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <label class="col-sm-3 col-form-label">都道府県</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="東京都 ●区●町">
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <label class="col-sm-3 col-form-label">ご住所</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control mb-2" placeholder="１−１−１ ●●マンション１０１">
+                    <small class="d-block text-center text-sm-left">※建物名、部屋番号も必ずご入力ください。</small>
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <label class="col-sm-3 col-form-label">メールアドレス</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control mb-2" placeholder="▲▲▲▲@●●.com">
+                    <small class="d-block text-center text-sm-left">※迷惑メールの対策などでドメイン指定を行っている場合、<br>「●●●●●.●●●」をドメイン指定解除してください。</small>
+                  </div>
+                </div>
+
+                <div class="form-group row mb-4">
+                  <label class="col-sm-3 col-form-label">再入力</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="メールアドレスを再入力してください">
+                  </div>
+                </div>
+
+                <div class="form-group row mb-5 mb-sm-4">
+                  <label class="col-sm-3 col-form-label">電話番号</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control mb-2" placeholder="0123456789 (ハイフン無し、半角数字)">
+                    <small class="d-block text-center text-sm-left">※連絡が取れる番号をご入力ください。</small>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-5 pt-sm-0 mb-4">
+            <a href="delivery.html" class="btn -arrow-right w-100">お届け先の入力へ</a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer text-center">
+        <div class="container">
+          <ul class="footer__nav">
+            <li><a href="">企業サイト</a></li>
+            <li><a href="">プライバシーポリシー</a></li>
+            <li><a href="">ご利用ガイド</a></li>
+            <li><a href="">お問い合わせ</a></li>
+          </ul>
+
+          <div class="footer__copyright">
+            <p>Copyright©︎ 2021 KOHNO All Rights Reserved.</p>
+          </div>
+
+        </div>
+      </footer>
+
+      <!-- Search mobile -->
+      <div id="sidebar__left" class="sidebar sidebar__left d-md-none">
+
+        <div class="sidebar__left__header d-flex d-md-none">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo.svg" alt="Logo">
+            </a>
+          </div>
+          <div class="ml-auto">
+            <span class="icon-close js-menu__close"></span>
+          </div>
+        </div>
+
+        <div class="sidebar__left__content">
+          <p class="mb-2">商品検索</p>
+          <div class="mb-3">
+
+            <div class="dnselect js-dnselect">
+              <div class="dnselect__label js-dnselect__label">すべての商品</div>
+              <ul class="js-dnselect__list">
+                <li><label><input type="radio" name="cate" value=""><span>すべての商品</span></label></li>
+                <li><label><input type="radio" name="cate" value=""><span>皿</span></label></li>
+                <li><label><input type="radio" name="cate" value=""><span>鉢・ボウル</span></label></li>
+                <li><label><input type="radio" name="cate" value=""><span>茶碗・お椀</span></label></li>
+                <li><label><input type="radio" name="cate" value=""><span>湯呑・酒器</span></label></li>
+                <li><label><input type="radio" name="cate" value=""><span>マグ・スープカップ</span></label></li>
+                <li><label><input type="radio" name="cate" value=""><span>ガラス製品</span></label></li>
+                <li><label><input type="radio" name="cate" value=""><span>ポット</span></label></li>
+                <li><label><input type="radio" name="cate" value=""><span>カトラリー</span></label></li>
+                <li><label><input type="radio" name="cate" value=""><span>雑貨・小物</span></label></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="sidebar__search">
+            <form action="">
+                <form role="search" method="get" class="search-form search__form" action="">
+                  <input type="search" class="search-field form-control" value="" name="s" />
+                  <button class="search-submit" type="submit">検索</button>
+                </form>
+            </form>
+          </div>
+
+          <div class="sidebar__list">
+            <div class="sidebar__list__title mb-3">アイテムで選ぶ</div>
+            <ul>
+              <li><a href="product-cat.html">皿</a></li>
+              <li><a href="product-cat.html">鉢・ボウル</a></li>
+              <li><a href="product-cat.html">茶碗・お椀</a></li>
+              <li><a href="product-cat.html">湯呑・酒器</a></li>
+              <li><a href="product-cat.html">マグ・スープカップ</a></li>
+              <li><a href="product-cat.html">ガラス製品</a></li>
+              <li><a href="product-cat.html">ポット</a></li>
+              <li><a href="product-cat.html">カトラリー</a></li>
+              <li><a href="product-cat.html">雑貨・小物</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar__socical d-none d-md-block">
+            <p class="sidebar__socical__title">SNS</p>
+            <ul class="">
+              <li><a href="" target="_blank"><span class="icon-facebook-circle"></span></a></li>
+              <li><a href="" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li><a href="" target="_blank"><span class="icon-twitter"></span></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="menu__mobile" class="nav__mobile">
+        <div class="nav__mobile__header d-flex">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo.svg" alt="Logo">
+            </a>
+          </div>
+          <div class="ml-auto">
+            <span class="icon-close js-menu__close"></span>
+          </div>
+        </div>
+        <div class="nav__mobile__content">
+          <ul class="nav__mobile--ul">
+            <li class="menu-item"><a href="index.html">ホーム</a></li>
+            <li class="menu-item"><a href="login.html">ログイン・マイページ</a></li>
+            <li class="menu-item"><a href="cart.html">カート <span>1</span></a></li>
+            <li class="menu-item"><a href="contact.html">購入履歴</a></li>
+            <li class="menu-item"><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+
+          <div class="nav__mobile__socical">
+            <ul class="">
+              <li><a href="" target="_blank"><span class="icon-facebook-circle"></span></a></li>
+              <li><a href="" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li><a href="" target="_blank"><span class="icon-twitter"></span></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div> <!-- .wrapper -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/libs/flickity/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/libs/select2/select2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

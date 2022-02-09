@@ -53,58 +53,97 @@
 
     <div class="wrapper">
 
-      <div class="container-sm container-md-780">
+      <div class="container-sm container-md-900">
 
-        <div class="login-page">
-          <form>
+        <div class="wrap__page">
+          <header class="page__header text-center">
+            <h1 class="page__header__title">ショッピングカート</h1>
+          </header>
 
-            <div class="login-alert -error">
-              <p>・メールアドレスまたはパスワードが正しくありません</p>
-            </div>
-            <div class="login-page__wrapinput">
-              <div class="form-group row">
-                <label for="staticEmail" class="col-sm-3 col-form-label">ログイン</label>
-                <div class="col-sm-9">
-                  <p class="login--text">ご登録のメールアドレスとパスワードをご入力ください</p>
+          <div class="page-cart__items mb-sm-4">
+            <div class="el__box">
+              <div class="el__item">
+                <div class="row">
+                  <div class="col-lg-7 col-md-6">
+                    <div class="el__item__thumb mb-3 mb-md-0">
+                      <div class="dnfix__thumb">
+                        <img src="images/product-thumb2.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-6 d-md-flex align-items-end text-right">
+                    <div class="el__item__meta">
+                      <p class="mb-3">購入日時</p>
+                      <p class="mb-3">メーカー名・商品名・メーカー品番</p>
+                      <p class="mb-3">数量　ー件</p>
+                      <p class="mb-3">販売価格　ー円</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="staticEmail" class="col-sm-3 col-form-label">メールアドレス</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="staticEmail" placeholder="Email Address">
+
+              <div class="el__item">
+                <div class="row">
+                  <div class="col-lg-7 col-md-6">
+                    <div class="el__item__thumb mb-3 mb-md-0">
+                      <div class="dnfix__thumb">
+                        <img src="images/product-thumb2.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-6 d-md-flex align-items-end text-right">
+                    <div class="el__item__meta">
+                      <p class="mb-3">購入日時</p>
+                      <p class="mb-3">メーカー名・商品名・メーカー品番</p>
+                      <p class="mb-3">数量　ー件</p>
+                      <p class="mb-3">販売価格　ー円</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form-group row">
-                <label for="inputPassword" class="col-sm-3 col-form-label">パスワード</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                </div>
+            </div> <!-- .el__box -->
+          </div>
+
+          <form action="payment.html">
+          <div class="page-cart__box">
+
+            <div class="el__box__wrap">
+              <div class="d-flex mb-5">
+                <div>注文内容</div>
+                <div class="ml-auto">ー件</div>
               </div>
-              <div class="form-group form-check row">
-                <div class="col-sm-9 offset-sm-3">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">パスワードを表示する</label>
-                </div>
+              <div class="d-flex mb-4">
+                <div>商品合計</div>
+                <div class="ml-auto">ー円</div>
+              </div>
+              <div class="d-flex mb-5">
+                <div>送料</div>
+                <div class="ml-auto">ー円</div>
+              </div>
+              <div class="d-flex mb-5">
+                <div>合計</div>
+                <div class="ml-auto">ー円</div>
+              </div>
+              <div class="d-flex mb-5">
+                <div>内消費税</div>
+                <div class="ml-auto">ー円</div>
               </div>
             </div>
+            <p class="text-center">あと〇〇円で送料無料となります<br>※商品により個別に送料が発生する可能性があります</p>
+          </div>
 
-            <button type="submit" class="btn -primary w-100 mb-3">ログイン</button>
-
-            <div class="text-center mb-5">
-              <a href="">パスワードをお忘れの方はこちら</a>
-            </div>
-
-            <div class="mb-4">
-              <a href="" class="btn -arrow-right w-100">新規会員登録はこちら</a>
-            </div>
-            <div class="mb-4">
-              <a href="" class="btn -arrow-right w-100">会員登録せずに購入</a>
-            </div>
+          <button type="submit" class="btn -primary w-100 mb-4">購入する</button>
 
           </form>
+
+          <div class="mb-4">
+            <a href="product-cat.html" class="btn -arrow-right w-100">買い物を続ける</a>
+          </div>
+          <div class="text-center">
+            <a href="product-detail.html" class="text-underline">商品詳細ページへ</a>
+          </div>
+
         </div>
-
-
       </div>
 
       <footer class="footer text-center">

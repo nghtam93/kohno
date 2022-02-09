@@ -66,9 +66,52 @@ hr{
 label{
     cursor: pointer;
 }
+
+input{
+    &.form-control{
+        padding: 10px 40px;
+        height: 48px;
+        font-size: 14px;
+        &::placeholder {
+            color: #A7A5A5;
+        }
+    }
+
+}
+textarea{
+    &.form-control{
+        padding: 25px 35px;
+        &::placeholder {
+          font-size: 11px;
+          color: #A7A5A5;
+        }
+    }
+
+}
+.text-underline{
+    text-decoration: underline;
+}
+.p-40{
+    padding: 40px;
+}
 .font14{
     font-size: 14px;
     line-height: normal;
+}
+.letter-spacing-a1{
+    letter-spacing: -1px;
+}
+.letter-spacing-a2{
+    letter-spacing: -2px;
+}
+.letter-spacing-a3{
+    letter-spacing: -3px;
+}
+.letter-spacing-a4{
+    letter-spacing: -4px;
+}
+.-color-A7A5A5{
+    color: #A7A5A5;
 }
 
 .rotate-180 {
@@ -94,10 +137,13 @@ label{
 .text__truncate.-n3{-webkit-line-clamp:3;}
 .text__truncate.-n4{-webkit-line-clamp:4;}
 
+
+/*br*/
+br{
+}
 /**/
 .btn{
     position:relative;
-    min-width:190px;
     border: 0;
     line-height: normal;
     padding: 8px 30px;
@@ -105,11 +151,12 @@ label{
     color: #000000;
     border-radius: 0;
     border: 1px solid #D9D9D9;
+    transition-duration: 0.3s;
     &:focus{
         box-shadow: none;
     }
     &:hover{
-        background-color: $color_primary;
+        background-color: #707070;
         color: #fff;
     }
     &.-arrow-right{
@@ -124,10 +171,24 @@ label{
         }
     }
     &.-primary{
-        min-width: 300px;
         border: 1px solid $color_primary;
         background: $color_primary;
         color: #fff;
+        &:hover{
+            background: #fff;
+            color: $color_primary;
+            border-color: $color_primary;
+        }
+    }
+
+    &.-secondary{
+        font-size: 11px;
+        height: 48px;
+        border: 1px solid #707070;
+        background: #707070;
+        color: #fff;
+        border-radius: 23px;
+        padding: 5px 20px;
         &:hover{
             background: #3f3f3f;
             color: #fff;
@@ -154,6 +215,15 @@ label{
         >*{
             padding-right: 20px;
             padding-left: 20px;
+        }
+    }
+
+    .gx-5{
+        margin-right: -5px;
+        margin-left: -5px;
+        >*{
+            padding-right: 5px;
+            padding-left: 5px;
         }
     }
 
@@ -237,6 +307,13 @@ label{
     }
 }
 @media (max-width: 575px){
+    .input-fake{
+        border: 1px solid #E5E5E5;
+        border-radius: 3px;
+        padding: 8px;
+        height: 48px;
+        line-height: 32px;
+    }
     .home-slider{
         margin-left: -20px;
         margin-right: -20px;
@@ -294,6 +371,9 @@ label{
     }
     .container-md-780{
         max-width: 810px;
+    }
+    .container-md-900 {
+        max-width: 930px;
     }
 
 }
