@@ -219,6 +219,10 @@
 /**/
 .dnselect{
     position:relative;font-size:14px;
+    &.-long{
+        height: 291px;
+        overflow: auto;
+    }
     &__label{
         width:100%;padding:6px 20px 6px 10px;border:1px solid #ccc;
         cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
@@ -258,9 +262,6 @@
         font-size:14px;pointer-events:none;opacity:0;
         background:#fff;
         z-index: 2;
-        height: 291px;
-        overflow: auto;
-
         transition:all .5s;
         li{
             position: relative;
@@ -304,8 +305,6 @@
     }
 
     input{display:none;}
-
-
 
 }
 
